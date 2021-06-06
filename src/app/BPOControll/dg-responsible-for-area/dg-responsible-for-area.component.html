@@ -1,0 +1,138 @@
+<!-- <div fxHide.xs fxHide.lt-md  class="parent_div"> -->
+  <div  class="parent_div">
+  <div class="child_div" >
+
+    <div style="display: flex; justify-content: center;align-items: center;">
+      <h2 class="Refund_style">Manage - Responsible Delivery man for particular Area</h2>
+      </div>
+
+  <div  fxLayoutAlign="center">
+    <mat-card >
+
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"><mat-icon color="primary">person_pin_circle</mat-icon></div>
+          <mat-card-title>Accountable For</mat-card-title>
+          <mat-card-subtitle>Assign Sector for Work</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+          <mat-form-field class="col-6" >
+            <mat-label>Search</mat-label>
+            <input matInput #searchReslt type="text" placeholder="Enter mobile number">
+            <button matSuffix mat-raised-button type="button"><mat-icon>search</mat-icon></button>
+            <mat-error *ngIf="">...</mat-error>
+          </mat-form-field>
+        </mat-card-content>
+
+      <form [formGroup]="AssignAreaToDgForm" (ngSubmit)="onSave()"  #formDirective="ngForm" 
+      (ngSubmit)="submitForm(AssignAreaToDgForm, formDirective)">
+
+      <div>
+          <mat-form-field class="col-6">
+          <input formControlName="firstName" matInput type="text"  placeholder="*First Name">
+          <mat-error *ngIf="">...</mat-error>
+          </mat-form-field>
+      </div>
+
+      <div>
+          <mat-form-field class="col-6">
+          <input formControlName="middleName"  matInput type="text"   placeholder="*Middle Name">
+          <mat-error *ngIf="">...</mat-error>
+          </mat-form-field>
+      </div>
+
+        <div>
+          <mat-form-field class="col-6">
+          <input formControlName="lastName" matInput type="text"  placeholder="*Last Name">
+          <mat-error *ngIf="">...</mat-error>
+          </mat-form-field>
+      </div>
+
+      <div>
+          <mat-form-field class="col-6">
+          <input formControlName="MobileNo" matInput type="text"   placeholder="*Mobile no.">
+          <mat-error *ngIf="">...</mat-error>
+          </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="col-6" appearance="fill">
+          <mat-label>* State</mat-label>
+          <mat-select formControlName="state"  (ngModelChange)="getDistrict()">
+            <mat-option *ngFor="let states of stateValue" [value]="states.stateName">
+                {{states.stateName}}
+            </mat-option>
+          </mat-select>
+          </mat-form-field>
+      </div>
+    
+      <div>
+        <mat-form-field class="col-6" appearance="fill">
+          <mat-label>* Dist</mat-label>
+          <mat-select formControlName="dist" (ngModelChange)="getTaluka()" >
+            <mat-option *ngFor="let district of distValue" [value]="district">
+                {{district}}
+            </mat-option>
+          </mat-select>
+          </mat-form-field>
+      </div>
+    
+      <div>
+        <mat-form-field class="col-6" appearance="fill">
+          <mat-label>* Tal</mat-label>
+          <mat-select formControlName="tal" (ngModelChange)="getCity()">
+            <mat-option *ngFor="let talkas of talukaValue"  [value]="talkas">
+              {{talkas}}
+            </mat-option>
+          </mat-select>
+          </mat-form-field>
+      </div>
+    
+      <div>
+        <mat-form-field class="col-6" appearance="fill">
+          <mat-label>* City</mat-label>
+          <mat-select formControlName="city">
+            <mat-option *ngFor="let cities of cityValue" [value]="cities" >
+              {{cities}}
+            </mat-option>
+          </mat-select>
+          </mat-form-field>
+      </div>
+
+
+
+      <div>
+          <mat-form-field class="col-6">
+          <input formControlName="SectorNo" matInput type="text" placeholder="*Sector eg. 07,21,77">
+          <mat-error *ngIf="">...</mat-error>
+          </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="col-6">
+        <input formControlName="pin" matInput type="text" placeholder="Pin Code">
+        <mat-error *ngIf="">...</mat-error>
+        </mat-form-field>
+    </div>
+
+    
+
+      <mat-card-actions align="end">
+        <button  class="btn-style" mat-raised-button color="accent" matTooltip="Save & Edit">Save</button>
+        <button  class="btn-style" mat-raised-button color="primary">Done</button>
+      </mat-card-actions>
+
+      </form>
+
+    </mat-card>
+  </div>
+</div>
+
+<!-- another component here -->
+<div >
+    <app-view-responsible>  </app-view-responsible>
+</div>
+</div>
+<app-small-device-not-supported>
+
+</app-small-device-not-supported>

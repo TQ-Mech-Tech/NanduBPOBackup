@@ -1,0 +1,53 @@
+<mat-toolbar   class="position-nav font" style="z-index: 1000;"  color="primary">
+  <mat-toolbar-row>
+ 
+        <!-- This is the Hambargur menu -->
+        
+                             <app-bpo-nav ></app-bpo-nav>
+                               <!--Delivery Nav  -->
+                              <div  class="spacer"></div>
+                             
+ 
+                 <button  class="align-right-xs" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                       <mat-icon>more_vert</mat-icon>
+                 </button>
+     <div>
+                 <!-- For Customer Only -->
+           <mat-menu  #menu="matMenu">
+
+            <button id="deliveryGuyName" mat-menu-item routerLink="/app-bpoauth-login"  *ngIf="!bpoIsAuthenticated">
+              <mat-icon> login </mat-icon>
+              <span class="menu-i">Log in</span>
+            </button>
+
+             <button id="deliveryGuyName" mat-menu-item routerLink="" *ngIf="bpoIsAuthenticated">
+               <mat-icon> account_circle </mat-icon>
+               <span class="menu-i">{{bpoUserName}}</span>
+             </button>
+ 
+             <button id="deliveryGuyLogOut" (click)="onLogOutbpo()" mat-menu-item routerLink="" *ngIf="bpoIsAuthenticated">
+               <mat-icon>logout</mat-icon>
+               <span class="menu-i">Log Out</span>
+             </button>
+ 
+          <hr id="uiLine" style="margin-top:-2px;" *ngIf="bpoIsAuthenticated">
+ 
+             <button mat-menu-item >
+              <!-- routerLink="/app-feedback-form" -->
+               <mat-icon>forum</mat-icon>
+               <span class="menu-i">Feedback</span>
+             </button>
+ 
+           </mat-menu>
+       </div>
+ 
+ </mat-toolbar-row>
+   
+ <!-- This code is for the desktop and tablet view  -->
+ <!-- this is the second row -->
+
+ 
+ 
+ 
+ </mat-toolbar>
+ 

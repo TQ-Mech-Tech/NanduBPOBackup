@@ -1,0 +1,38 @@
+<!-- <div fxHide.xs fxHide.lt-md  class="parent_div"> -->
+  <div class="child_div">
+    <div style="display: flex; justify-content: center;align-items: center;">
+      <h3 class="Refund_style">All Entered Details of the Products by BPO</h3>
+      </div>
+<div fxLayout="row wrap" fxLayoutAlign="space-evenly">
+  <mat-card class="example-card" *ngFor="let prodInfo of viewBpoAddedProduct" style="margin-top: 0.5rem;">
+    <input type="hidden" name="text" [value]="prodInfo._id" #inputIdValue >
+    <mat-card-header>
+<!-- https://raw.githubusercontent.com/TQ-Mech-Tech/product-images-file/master/primium-lokwan-wheat.jpg -->
+    <!-- <div mat-card-avatar class="example-header-image" style="background-image: url('https://raw.githubusercontent.com/TQ-Mech-Tech/product-images-file/master/royal-sharbati-wheat.jpg'); background-size:cover"></div> -->
+      <mat-card-title>{{prodInfo.productName}}</mat-card-title>
+      <mat-card-subtitle>{{prodInfo.productStatus}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image  class="mat-card-image" [src]="prodInfo.imageUrl" alt="Photo of Product Images">
+    <mat-card-content>
+      <p>
+        {{prodInfo.detail}}
+      </p>
+      <label>{{productKG}} kg </label> &nbsp;
+      <label style="color: green;"> ₹ {{prodInfo.totalAmount}}</label>
+    </mat-card-content>
+    <mat-card-actions >
+     <div align="end">
+      <div style="display: flex;flex-direction: row;">
+        <button  class="btn-style" mat-raised-button color="primary" (click)="getEditId(prodInfo._id)" >Edit</button>
+      <button  class="btn-style" mat-raised-button color="warn" (click)="getDeleteId(prodInfo._id)" >Delete</button><!-- <mat-icon>delete</mat-icon> -->
+      </div>
+     </div>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+</div>
+<!-- </div> -->
+<app-small-device-not-supported>
+
+</app-small-device-not-supported>

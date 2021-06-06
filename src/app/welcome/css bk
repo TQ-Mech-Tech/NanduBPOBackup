@@ -1,0 +1,149 @@
+#whatwedo{
+  height: 500vh;
+  /* background-image: linear-gradient(to left bottom, #09eaf4, #00d7ff, #00c1ff, #00a9ff, #008dff, #0e7ef5, #1e6ee9, #2b5edd, #335bd3, #3857c9, #3c54bf, #3f51b5);
+  background-image: linear-gradient(to right bottom, #09eaf4, #00ccfa, #00abfd, #0087f5, #005ddb, #074dcd, #0f3cbd, #162aae, #2235b0, #2c3eb2, #3648b4, #3f51b5); */
+  /* background-color: #ff9d00;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23ff9d00' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23fb8d17' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23f47d24' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23ed6e2d' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23e35f34' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23d85239' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23cc453e' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23be3941' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23b02f43' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23a02644' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23901e44' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23801843' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%236f1341' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%235e0f3d' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%234e0c38' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%233e0933' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%232e062c' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23210024' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover; */
+  background-color: #f2f4f7;
+}
+/*
+.bg{
+  background-image: url("flourImg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: 100% 100%; */
+  /* background-clip: padding-box;
+  object-fit: cover;
+  opacity: 0.4; */
+  /* filter:contrast(200%) brightness(150%); */
+  /* background:rgb(0, 0, 0);
+ background: rgb(0, 0, 0,0.6); */
+
+  /* filter: blur(5px); */
+
+  .container-grid {
+  display: grid;
+  grid-template-rows: 400px 400px 400px 400px 400px 400px;
+  grid-template-columns: 1270px;
+  column-gap: 70px;
+  row-gap: 10px;
+  padding: 10px;
+  background-color: #D3D5D8;
+  
+  
+
+  }
+
+  /* Style the cards */
+  .card {
+    background-color: #D3D5D8;
+    /* background-color: #00e5fd; */
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    /* margin-left: 60px; */
+    margin-right: 30px;
+    display: grid;
+    grid-template-columns: 400px 810px;
+    column-gap: 0px;
+  }
+
+
+
+
+
+
+
+  div.left-text_card{
+
+    clip-path: polygon(3% 0, 100% 0%, 93% 120%, 0% 100%);
+    margin-left: -10px;
+    background: #FFFFFF;
+    height: 62vh;
+    
+    
+  }
+  div.right-text_card{
+    /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+    clip-path: polygon(3% 0, 100% 0%, 98% 100%, 0% 100%);
+    right: 0;
+    background: #FFFFFF;
+    height: 62vh;
+    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px; */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+  }
+
+
+  .card-2{
+    background-color: #D3D5D8;
+    /* background-color: #0093ff; */
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    /* margin-left: 60px; */
+    margin-right: 30px;
+    display: grid;
+    grid-template-columns:  810px 400px;
+    column-gap: 0px;
+  }
+
+
+
+
+
+
+  div.b-left-text_card{
+
+    clip-path: polygon(0 0, 97% 0, 100% 100%, 2% 100%);
+    margin-left: -10px;
+    background: #FFFFFF;
+    height: 62vh;
+
+    
+    
+  }
+  div.b-right-text_card{
+    /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+    clip-path: polygon(0 0, 97% 0, 100% 100%, 5% 100%);
+    right: 0;
+    background: #FFFFFF;
+    height: 62vh;
+  
+
+  }
+
+
+ <!--About US Id is start from here-->
+     <section id="about-us" >
+       <!-- <div class="square_Border">
+        <h1 class="about_Us_Name">About Us</h1>
+       </div>
+       <div class="text_img">
+        <div  >
+          <div  >
+            <div  class="owner_Name">Surendra Gajabhiye </div>
+               <div class="line"></div>
+               <p class="founder_Name" >FOUNDER</p>
+         </div>
+
+        </div>
+
+       </div>
+       <div class="paraGraph">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+          containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+          PageMaker including versions of Lorem Ipsum</p>
+      </div>
+       <div class="owner_img">
+      </div> -->
+
+     </section>

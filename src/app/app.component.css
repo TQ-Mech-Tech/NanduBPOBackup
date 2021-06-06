@@ -1,0 +1,30 @@
+.main{
+  margin-top: 36px;
+  margin-bottom: 0px;
+}
+
+mat-sidenav-container, mat-sidenav-content, mat-sidenav{
+  height: 100%;
+}
+
+mat-sidenav{
+  width: 250px;
+}
+
+.main-block{
+  margin: 70px 0;
+}
+
+
+.footer{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: cornsilk;
+  font-family: 'Poppins' , sans-serif;
+ 
+  
+}
+
+
+

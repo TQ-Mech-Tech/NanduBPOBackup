@@ -1,0 +1,52 @@
+<!-- <div fxHide.xs fxHide.lt-md  class="parent_div"> -->
+<div  class="parent_div">
+  <div class="child_div">
+    <div style="display: flex; justify-content: center;align-items: center;">
+      <h2 class="Refund_style">BPO - Employee of form Login Window</h2>
+      </div>
+<div class="main-div">
+<mat-card>
+
+  <!-- title of the page -->
+  <div style="text-align: center;">
+      <mat-card-title> Log In</mat-card-title>
+      <mat-card-subtitle>Customer Care Login</mat-card-subtitle>
+  </div>
+
+<form [formGroup]="bpoAuthLogin" (ngSubmit)="onLogin()">
+  <!-- Email is here -->
+  <div>
+    <mat-form-field class="col-6">
+      <input matInput formControlName="email" type="email" placeholder="E-Mail">
+      <mat-error *ngIf="!bpoAuthLogin.get('email').valid && bpoAuthLogin.get('email').touched">Please enter a valid email</mat-error>
+      </mat-form-field>
+  </div>
+
+
+  <!-- Password is here -->
+  <div>
+    <mat-form-field class="col-6">
+      <input formControlName="Password" type="password" matInput placeholder="Password">
+      <mat-error *ngIf="!bpoAuthLogin.get('Password').valid && bpoAuthLogin.get('Password').touched">Please enter a valid password</mat-error>
+      </mat-form-field>
+  </div>
+
+
+  <!-- login is here -->
+  <button fxFlexFill mat-raised-button color="primary" type="submit" >Login</button>
+
+  <!-- forget password page is here -->
+  <!-- <mat-card-actions class="center" >
+  <a mat-button  matTooltip="Forget Password" routerLink="/forget-password">Forget Password ? </a> <span style="font-size: larger; padding: 0 3px;">|</span>
+  <a mat-button matTooltip="Register Now" routerLink="/signup">Sign Up</a>
+  </mat-card-actions> -->
+</form>
+</mat-card>
+
+
+</div>
+</div>
+</div>
+<app-small-device-not-supported>
+
+</app-small-device-not-supported>

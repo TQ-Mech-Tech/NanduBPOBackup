@@ -1,0 +1,188 @@
+
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+ <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- BPO's Nav Bar -->
+
+
+  <div style="margin-left: 150px;" >
+
+    <!-- you have to code here for disabled and enabled BPO's nav bar on condtion -->
+    <!-- products work -->
+       <div fxHide.xs class="addproduct-btn">
+    <nav id="menu">
+      <div class="menu-item" *ngIf="isbpoAuthenticated">
+          <div class="menu-text">
+              <a  style="font-size: 14px ; cursor: pointer; text-transform: uppercase;font-weight: 400;">Products<span id="expand" class="material-icons">expand_more</span></a>
+          </div>
+          <div class="sub-menu">
+              <div class="icon-box" *ngIf="isbpoAuthenticated">
+                  <div class="icon"><mat-icon>queue</mat-icon></div>
+                  <div class="text">
+                      <div routerLink="/add-product-services" *ngIf="isbpoAuthenticated" class="title">Add Product</div>
+                      <div class="sub-text">Add Product, Name,Price, Image And More</div>
+                  </div>
+              </div>
+              <div class="icon-box" *ngIf="isbpoAuthenticated">
+                  <div class="icon"><mat-icon>preview</mat-icon></div>
+                  <div class="text">
+                      <div routerLink="/view-product-services" *ngIf="isbpoAuthenticated" class="title">View Product</div>
+                      <div class="sub-text">View Product , Edit And Delete Product From User's Window</div>
+                  </div>
+              </div>
+              <div class="icon-box" *ngIf="isbpoAuthenticated">
+                <div class="icon"><mat-icon>preview</mat-icon></div>
+                <div class="text">
+                    <div routerLink="/app-add-grinding-product" *ngIf="isbpoAuthenticated" class="title">Add Grindind Product</div>
+                    <div class="sub-text">Add Grinding Details</div>
+                </div>
+            </div>
+              <div class="sub-menu-holder"></div>
+          </div>
+      </div>
+
+      <!-- Delivery services -->
+      <div class="menu-item highlight" *ngIf="isbpoAuthenticated">
+          <div class="menu-text">
+              <a  style="font-size: 14px ; cursor: pointer; text-transform: uppercase;font-weight: 400;">Delivery Services<span id="expand" class="material-icons">expand_more</span></a>
+          </div>
+          <div class="sub-menu double">
+              <div class="icon-box gb a" *ngIf="isbpoAuthenticated">
+                  <div class="icon"><i class="far fa-book"></i></div>
+                  <div class="text">
+                    <div class="title">Delivery</div>
+                    <div class="sub-text">Management Window</div>
+                  </div>
+              </div>
+              <div class="icon-box gb b" *ngIf="isbpoAuthenticated">
+                  <div class="icon"></div>
+                  <div class="text">
+                      <div class="title"> </div>
+                      <div class="sub-text"></div>
+                  </div>
+              </div>
+
+
+
+              <div class="icon-box gb c" *ngIf="isbpoAuthenticated">
+                  <div class="icon"> <mat-icon>lock</mat-icon></div>
+                  <div class="text">
+                      <div class="title"  routerLink="/app-dg-sign-up"> DG Sign Up </div>
+                      <div class="sub-text">Register A New Delivery Man's Profile</div>
+                  </div>
+              </div>
+              <div class="icon-box gb d" *ngIf="isbpoAuthenticated">
+                  <div class="icon"><mat-icon>manage_accounts</mat-icon></div>
+                  <div class="text">
+                      <div class="title" routerLink="/dg-profile">DG Profile</div>
+                      <div class="sub-text">Show The Record Of Delivery Man's Profile </div>
+                  </div>
+              </div>
+              <div class="icon-box gb e" *ngIf="isbpoAuthenticated">
+                  <div class="icon"> <mat-icon>room</mat-icon></div>
+                  <div class="text">
+                      <div class="title" routerLink="/dg-responsible-for-area" >DG Responsible Area</div>
+                      <div class="sub-text">Who Is Responsible For Particular Area</div>
+                  </div>
+              </div>
+              <div class="icon-box gb f" *ngIf="isbpoAuthenticated">
+                  <div class="icon"></div>
+                  <div class="text">
+                      <div class="title"></div>
+                      <div class="sub-text"></div>
+                  </div>
+              </div>
+              <div class="bottom-container">
+                  Ready to dive in? <a>Get Started</a>
+              </div>
+              <div class="sub-menu-holder"></div>
+          </div>
+      </div>
+
+        <!-- customer Services -->
+            <div class="menu-item highlight" *ngIf="isbpoAuthenticated">
+                <div class="menu-text">
+                    <a style="font-size: 14px ; cursor: pointer; text-transform: uppercase;font-weight: 400;">Customer Services<span id="expand" class="material-icons">expand_more</span></a>
+                </div>
+                <div class="sub-menu triple">
+                    <div class="top-container gb c icon-box" *ngIf="isbpoAuthenticated">
+                        <div class="icon big"><i class="far fa-book"></i></div>
+                        <div class="text">
+                            <div class="title" >Customer Services</div>
+                            <div class="sub-text"> Manage Customers Window</div>
+                        </div>
+                    </div>
+                    
+                   
+
+              <div class="icon-box gb b" *ngIf="isbpoAuthenticated">
+                  <div class="icon"><mat-icon>list_alt</mat-icon></div>
+                  <div class="text">
+                      <div class="title" routerLink="/app-view-customer-order">Customer Order </div>
+                      <div class="sub-text">View and Manage Customer's Recived Order</div>
+                  </div>
+              </div>
+
+
+              <div class="icon-box gb c" *ngIf="isbpoAuthenticated">
+                  <div class="icon"><mat-icon>person_outline</mat-icon></div>
+                  <div class="text">
+                      <div class="title"  routerLink="/app-view-customer-profile-table" >Customers Profile</div>
+                      <div class="sub-text">Show The Record of Customers Profile</div>
+                  </div>
+              </div>
+
+
+              <div class="icon-box gb d" *ngIf="isbpoAuthenticated">
+                  <div class="icon"><mat-icon>rotate_right</mat-icon></div>
+                  <div class="text">
+                      <div class="title"  routerLink="/app-fix-customer-refund" >Refund</div>
+                      <div class="sub-text">View and Manage Customer's Refund Request</div>
+                  </div>
+              </div>
+
+
+              <div class="icon-box gb e" *ngIf="isbpoAuthenticated">
+                  <div class="icon"><mat-icon>check</mat-icon></div>
+                  <div class="text">
+                      <div class="title"  routerLink="/app-view-approved-refund">Approved Refund</div>
+                      <div class="sub-text">Manage Customer's Approved Fund</div>
+                  </div>
+              </div>
+
+              <div class="icon-box gb f" *ngIf="isbpoAuthenticated">
+                  <div class="icon"><mat-icon>event_busy</mat-icon></div>
+                    <div class="text">
+                        <div class="title" routerLink="/app-view-cancle-refund">Cancel Refund</div>
+                        <div class="sub-text">View and Manage Customer's Cancel Fund</div>
+                    </div>
+              </div>
+
+              <!-- <div class="icon-box gb f">
+                <div class="icon"><mat-icon>show_chart</mat-icon></div>
+                  <div class="text">
+                      <div class="title" routerLink="/app-payment-info">Received Payment Info</div>
+                      <div class="sub-text">Received Payment Details</div>
+                  </div>
+            </div> -->
+             
+            <div class="icon-box gb f" *ngIf="isbpoAuthenticated">
+                <div class="icon"><mat-icon>scatter_plot</mat-icon></div>
+                  <div class="text">
+                      <div class="title" routerLink="/app-mill-info">Received Mill Info</div>
+                      <div class="sub-text">Received Mill Details</div>
+                  </div>
+            </div>
+         </div>
+    </div>
+      
+        <div id="sub-menu-container">
+          <div id="sub-menu-holder">
+              <div id="sub-menu-bottom">
+
+              </div>
+          </div>
+      </div>
+  </nav>
+</div>
+</div>

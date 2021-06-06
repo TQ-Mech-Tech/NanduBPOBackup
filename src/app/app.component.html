@@ -1,0 +1,47 @@
+<main>
+ <!-- nav-start -->
+ <mat-sidenav-container>
+   
+
+   <mat-sidenav-content>
+     <!-- here we had toolbar code -->
+     <app-toolbar></app-toolbar>
+   <div  > 
+    
+         <router-outlet></router-outlet>
+         
+   
+      <!-- footer code start from here -->
+      <app-footer></app-footer>
+  </div>
+</mat-sidenav-content>
+</mat-sidenav-container>
+</main>       
+        
+
+
+
+
+        <!-- nav-start
+        <mat-sidenav-container>
+          <mat-sidenav #sidenav role="navigation">
+            here we had side-nav-code
+            <app-header (closeSidenav)="sidenav.close()"></app-header>
+          </mat-sidenav>
+      
+          <mat-sidenav-content>
+            here we had toolbar code
+            <app-toolbar (sidenavToggle)="sidenav.toggle()"></app-toolbar>
+          <div  > 
+            <main class="main">
+                <router-outlet></router-outlet>
+                
+            </main>
+             footer code start from here
+             <app-footer></app-footer>
+         </div>
+      </mat-sidenav-content>
+  </mat-sidenav-container> -->
+
+
+

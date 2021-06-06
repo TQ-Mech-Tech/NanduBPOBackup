@@ -1,0 +1,43 @@
+.Refund_style{
+  text-transform: capitalize;letter-spacing: 3px;font-weight: 300;width: 500px;margin-top: 20px;padding: 5px; color: white;text-align: center; background: rgb(78, 78, 199) ;box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+      table {
+        width: 100%;
+      }
+
+      .fx_container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .search_box{
+      width: 80vw;
+      margin-right: 20px;
+      border-radius: 10px; border: 3px solid #3f51b5;
+      margin: 20px;
+      padding: 20px;
+      }
+
+      .search_btn{
+        width: 10vw;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+
+      .btn_view{
+        padding: 6px;
+      }
+
+      button.btn_button {
+      background: rgb(86, 86, 245);
+      color: white;
+      width: 100px;
+      text-align: center;
+      overflow: hidden;
+      }
+

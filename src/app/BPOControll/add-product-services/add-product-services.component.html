@@ -1,0 +1,167 @@
+<!-- <div fxHide.xs fxHide.lt-md  class="parent_div"> -->
+<div  class="parent_div">
+
+  <div class="child_div">
+   <div style="display: flex; justify-content: center;align-items: center;">
+     <h3 class="Refund_style">Add Products And Product's Details for The Customer's Product Page</h3>
+     </div>
+   <section class="main-div"  fxLayoutAlign="center" >
+
+     <mat-card class="mat-card">
+
+         <mat-card-header>
+           <div mat-card-avatar class="example-header-image"><mat-icon style="font-size:40px;" color="primary">person_pin_circle</mat-icon></div>
+           <mat-card-title>Add Products</mat-card-title>
+           <mat-card-subtitle>Add Product's Details</mat-card-subtitle>
+         </mat-card-header>
+
+       <form [formGroup]="addProductServiceForm" (ngSubmit)="onSave()">
+
+
+         <div>
+           <mat-card-content>
+             <mat-form-field  class="col-6">
+               <span matPrefix><mat-icon>search</mat-icon></span>
+               <input matInput [value]="_id"
+               type="text" placeholder="* enter product id">
+             
+               <mat-error *ngIf=""></mat-error>
+               <button mat-raised-button (click)="onCallIdData()" matSuffix type="button">search</button>
+             </mat-form-field>
+           </mat-card-content>
+       </div>
+
+       <div>
+         <mat-form-field  class="col-6">
+           <input matInput
+           formControlName="productName"
+           type="text" placeholder="*Product Name">
+           <mat-error *ngIf="!addProductServiceForm.get('productName').valid && addProductServiceForm.get('productName').touched">Please Enter Product Name</mat-error>
+
+         </mat-form-field>
+       </div>
+ 
+       <div>
+         <mat-form-field  class="col-6">
+           <input matInput  formControlName="grindingType"  type="text" placeholder="* Grinding Type">
+           <mat-error *ngIf="!addProductServiceForm.get('grindingType').valid && addProductServiceForm.get('grindingType').touched">
+             Please Fill Grinding Type</mat-error>
+         </mat-form-field>
+       </div>
+
+       <div>
+         <mat-form-field  class="col-6">
+           <input matInput  formControlName="weightOfProduct" type="text" placeholder="* Weight (kg)">
+           <mat-error *ngIf="!addProductServiceForm.get('weightOfProduct').valid && addProductServiceForm.get('weightOfProduct').touched">
+             Input should be an integer value</mat-error>
+         </mat-form-field>
+       </div>
+
+       <div>
+         <mat-form-field  class="col-6">
+           <span matPrefix>₹ &nbsp;</span>
+           <input matInput (keypress)="($event.charCode >= 48 && $event.charCode < 58)"  formControlName="priceOfProduct" type="text" placeholder="* Price">
+           <mat-error *ngIf="!addProductServiceForm.get('priceOfProduct').valid && addProductServiceForm.get('priceOfProduct').touched">
+             Please Enter Product Price</mat-error>
+         </mat-form-field>
+
+       </div>
+
+       <div>
+         <mat-form-field  class="col-6">
+           <span matPrefix>₹ &nbsp;</span>
+          <input  matInput (keypress)="($event.charCode >= 48 && $event.charCode < 58)"  formControlName="serviceCharge" type="text" placeholder="* Service Charge ">
+           <mat-error *ngIf="!addProductServiceForm.get('serviceCharge').valid && addProductServiceForm.get('serviceCharge').touched">
+             Please Enter Product's Service Charge</mat-error>
+         </mat-form-field>
+       </div>
+
+       <div>
+         <mat-form-field  class="col-6">
+           <span matPrefix>% &nbsp;</span>
+           <input  matInput (keypress)="($event.charCode >= 48 && $event.charCode < 58 || $event.charCode == 46)" formControlName="surCharge" type="text" placeholder="*Surcharge">
+           <mat-error *ngIf="!addProductServiceForm.get('surCharge').valid && addProductServiceForm.get('surCharge').touched">
+             Please Enter Product's Surcharge</mat-error>
+         </mat-form-field>
+       </div>
+
+       <div>
+         <mat-form-field  class="col-6">
+           <span matPrefix>% &nbsp;</span>
+           <input    matInput  (keypress)="($event.charCode >= 48 && $event.charCode < 58 || $event.charCode == 46)" formControlName="sgst" type="text" placeholder="*SGST ">
+           <mat-error *ngIf="!addProductServiceForm.get('sgst').valid && addProductServiceForm.get('sgst').touched">
+             Please Enter SGST </mat-error>
+         </mat-form-field>
+       </div>
+
+       <div>
+         <mat-form-field  class="col-6">
+           <span matPrefix>% &nbsp;</span>
+           <input matInput  (keypress)="($event.charCode >= 48 && $event.charCode < 58 || $event.charCode == 46)" formControlName="cgst" type="text" placeholder="*CGST ">
+           <mat-error *ngIf="!addProductServiceForm.get('cgst').valid && addProductServiceForm.get('cgst').touched">
+             Please Enter Product's CGST</mat-error>
+          </mat-form-field>
+          <mat-card-actions align="end">
+           <button color="primary" class="calculate_button" mat-raised-button (click)="getTotalAmountValue()" [disabled]="addProductServiceForm.controls['priceOfProduct' && 'serviceCharge' && 'surCharge'&& 'sgst' && 'cgst'].invalid"  type="button" matSuffix>Calculate Net Amount</button>
+         </mat-card-actions>
+       </div>
+       <div>
+
+         <mat-form-field class="example-full-width">
+           <mat-label>Total Amount</mat-label>
+           <span matPrefix>₹  &nbsp;</span>
+           <input type="tel" formControlName="totalAmount" [readonly]="true" matInput placeholder="555-555-1234">
+           <mat-error *ngIf="!addProductServiceForm.get('totalAmount').valid && addProductServiceForm.get('totalAmount').touched">
+             Please Enter Product's Total Amount</mat-error>
+         </mat-form-field>
+       </div>
+       <div>
+         <mat-form-field  class="col-6">
+           <input matInput   formControlName="gitImageUrl" type="text" placeholder="* Image URL (from GitHub)">
+           <mat-error *ngIf="!addProductServiceForm.get('gitImageUrl').valid && addProductServiceForm.get('gitImageUrl').touched">
+             Please Enter Product's Image Path</mat-error>
+         <button mat-raised-button (click)="oncheckclick()" type="button" matSuffix matTooltip="preview"><mat-icon>perm_media</mat-icon></button>
+       </mat-form-field>
+       </div>
+   <br>
+       <div>
+           <img mat-card-image class="product_Imag" [src]="imageURL" alt="image preview">
+           <!-- <mat-form-field  class="col-6">
+           <input matInput  type="text" placeholder="* Product Status">
+           <mat-error *ngIf="!addProductServiceForm.get('productStatus').valid && addProductServiceForm.get('productStatus').touched">
+             Please Enter Product's Status</mat-error>
+           </mat-form-field> -->
+
+           <mat-form-field color="primary" appearance="fill">
+            <mat-label>Select Product Status</mat-label>
+            <mat-select  formControlName="productStatus"  disableRipple>
+              <mat-option value="1">Available</mat-option>
+              <mat-option value="2">Not Available</mat-option>
+              <mat-error *ngIf="!addProductServiceForm.get('productStatus').valid && addProductServiceForm.get('productStatus').touched"></mat-error>
+            </mat-select>
+          </mat-form-field>
+       </div>
+
+       <div>
+         <mat-form-field  class="col-6">
+           <textarea  matInput  formControlName="detailsOfProduct" type="text" placeholder="* Details"></textarea>
+           <mat-error *ngIf="!addProductServiceForm.get('detailsOfProduct').valid && addProductServiceForm.get('detailsOfProduct').touched">
+             Please Enter Product's Detials</mat-error>
+         </mat-form-field>
+       </div>
+
+       <mat-card-actions align="end">
+
+           <button class="btn-style" mat-raised-button color="primary" matTooltip="save record">save</button>
+           <button class="btn-style" mat-raised-button color="warn" type="button" matTooltip="save record">delete</button>
+       </mat-card-actions>
+       </form>
+
+     </mat-card>
+   </section>
+
+ </div>
+</div>
+<app-small-device-not-supported>
+</app-small-device-not-supported>
+

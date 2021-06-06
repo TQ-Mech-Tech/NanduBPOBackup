@@ -1,0 +1,363 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+.Refund_style{
+  text-transform: capitalize;letter-spacing: 3px;font-weight: 300;width: 400px;margin-top: 20px;padding: 5px; color: white;text-align: center; background: rgb(78, 78, 199) ;box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+mat-form-field{
+  width: 100%;
+
+}
+.main-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+mat-card-title{
+  color:#3F51B5;
+  font: Arial,sans-serif;
+  font-size: 20px;
+
+}
+
+
+/* this is the large Devices view */
+@media only screen and (min-width:1200px){
+  .child_div{
+    position: relative;
+    top: 75px;
+    bottom: 0;
+    margin-bottom:6.8%;
+    }
+    .mat-card{
+      width: 50vw;
+    }
+
+    .product_Imag{
+      width: 47vw;
+      height: 40vh;
+      margin: 3px 2px;
+    }
+    .col-6{
+      width: 47vw;
+    }
+}
+
+
+
+
+
+
+
+
+  /* this is the mobile view */
+  @media only screen and (max-width:600px){
+    div.header-section{
+      height: 90%;
+      width: 100%;
+      background: black;
+      overflow: hidden;
+    }
+    div > img{
+        position: relative;
+        top: 58px;
+        bottom: 500px;
+        height: 36vh;
+        width: 100%;
+        margin-bottom: 8vh;
+        opacity: 0.3;
+        object-fit: cover;
+    }
+
+    .text_container{
+        position: absolute;
+        margin: -10% 10px 10px 10px  ;
+        word-wrap: break-word;
+        text-transform: capitalize;
+        color: white;
+  }
+   div.circle_container{
+     position: relative;
+     margin-top: -210px;
+     margin-bottom: 0px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+     .circle{
+       position: relative;
+       border: 7px solid #f00;
+       width: 30%;
+       border-radius: 50%;
+    }
+    .circle::after{
+      content: "";
+      padding-bottom: 100%;
+      display: block;
+    }
+    .arrow-down {
+      position: absolute;
+      top:-11px ;
+      left: -7px;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      /* border-top: 20px solid #f00; */
+      border-bottom: 7px solid #f00;
+    }
+
+    .line{
+       position: absolute;
+       left:50%;
+       top: 60%;
+       border: 4.5px solid #f00;
+       width: 1vw;
+       height: 6vh;
+       background-color: #f00;
+       border-bottom-right-radius: 50%;
+       border-bottom-left-radius:50% ;
+       transform: translate(-50%, -50%);
+
+    }
+
+    .small_circle{
+      position: absolute;
+      left: -6px;
+      top:-25px ;
+      height: 12px;
+      width: 0;
+      border: 6px solid ;
+      border-radius: 50%;
+      color:#f00 ;
+      background: #f00;
+    }
+
+   div.text_container span{
+        padding: 10px;
+  }
+
+  .Error_message{
+  text-align: center; font-size: 24px; margin: 15px 20px 8px;
+
+  }
+}
+
+
+/* this is Also Mobile Screen but bigger than Above screen */
+@media only screen and (min-width:794px){
+  .child_div{
+    position: relative;
+    top: 132px;
+    bottom: 0;
+    margin-bottom: 17%;
+    }
+    .mat-card{
+      width: 80vw;
+    }
+    div.header-section{
+      height: 90%;
+      width: 100%;
+      background: black;
+      overflow: hidden;
+    }
+    div.header-section > img{
+        position: relative;
+        top: 58px;
+        bottom: 500px;
+        height: 36vh;
+        width: 100%;
+        margin-bottom: 8vh;
+        opacity: 0.3;
+        object-fit: cover;
+    }
+
+    .text_container{
+        position: absolute;
+        margin: -10% 10px 10px 10px  ;
+        word-wrap: break-word;
+        text-transform: capitalize;
+        color: white;
+  }
+   div.circle_container{
+     position: relative;
+     margin-top: -210px;
+     margin-bottom: 0px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+     .circle{
+       position: relative;
+       border: 7px solid #f00;
+       width: 15%;
+       border-radius: 50%;
+    }
+    .circle::after{
+      content: "";
+      padding-bottom: 100%;
+      display: block;
+    }
+    .arrow-down {
+      position: absolute;
+      top:-11px ;
+      left: -7px;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      /* border-top: 20px solid #f00; */
+      border-bottom: 7px solid #f00;
+    }
+
+    .line{
+       position: absolute;
+       left:50%;
+       top: 60%;
+       border: 4.5px solid #f00;
+       width: 1vw;
+       height: 6vh;
+       background-color: #f00;
+       border-bottom-right-radius: 50%;
+       border-bottom-left-radius:50% ;
+       transform: translate(-50%, -50%);
+
+    }
+
+    .small_circle{
+      position: absolute;
+      left: -6px;
+      top:-25px ;
+      height: 12px;
+      width: 0;
+      border: 6px solid ;
+      border-radius: 50%;
+      color:#f00 ;
+      background: #f00;
+    }
+
+   div.text_container span{
+        padding: 10px;
+  }
+
+  .Error_message{
+  text-align: center; font-size: 24px; margin: 15px 20px 8px;
+
+  }
+}
+
+
+
+/* this is the laptop view */
+@media only screen and (min-width:800px){
+  .child_div{
+    position: relative;
+    top: 75px;
+    bottom: 0;
+    margin-bottom:6.8%;
+    }
+    .mat-card{
+      width: 50vw;
+    }
+
+    .product_Imag{
+      width: 47vw;
+      height: 40vh;
+      margin: 3px 2px;
+    }
+    .col-6{
+      width: 47vw;
+    }
+
+    div.header-section{
+      height: 90%;
+      width: 100%;
+      background: black;
+      overflow: hidden;
+    }
+    div.header-section > img{
+        position: relative;
+        top: 58px;
+        bottom: 500px;
+        height: 36vh;
+        width: 100%;
+        margin-bottom: 8vh;
+        opacity: 0.3;
+        object-fit: cover;
+    }
+
+    .text_container{
+        position: absolute;
+        margin: -10% 10px 10px 10px  ;
+        word-wrap: break-word;
+        text-transform: capitalize;
+        color: white;
+  }
+   div.circle_container{
+     position: relative;
+     margin-top: -210px;
+     margin-bottom: 0px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+     .circle{
+       position: relative;
+       border: 7px solid #f00;
+       width: 15%;
+       border-radius: 50%;
+    }
+    .circle::after{
+      content: "";
+      padding-bottom: 100%;
+      display: block;
+    }
+    .arrow-down {
+      position: absolute;
+      top:-11px ;
+      left: -7px;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      /* border-top: 20px solid #f00; */
+      border-bottom: 7px solid #f00;
+    }
+
+    .line{
+       position: absolute;
+       left:50%;
+       top: 60%;
+       border: 4.5px solid #f00;
+       width: 1vw;
+       height: 6vh;
+       background-color: #f00;
+       border-bottom-right-radius: 50%;
+       border-bottom-left-radius:50% ;
+       transform: translate(-50%, -50%);
+
+    }
+
+    .small_circle{
+      position: absolute;
+      left: -6px;
+      top:-25px ;
+      height: 12px;
+      width: 0;
+      border: 6px solid ;
+      border-radius: 50%;
+      color:#f00 ;
+      background: #f00;
+    }
+
+   div.text_container span{
+        padding: 10px;
+  }
+
+  .Error_message{
+  text-align: center; font-size: 24px; margin: 15px 20px 8px;
+
+  }
+
+}

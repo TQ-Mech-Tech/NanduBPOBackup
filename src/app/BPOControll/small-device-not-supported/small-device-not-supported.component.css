@@ -1,0 +1,286 @@
+
+  /* this is the mobile view */
+  @media only screen and (max-width:600px){
+    div.header-section{
+      height: 90%;
+      width: 100%;
+      background: black;
+      overflow: hidden;
+    }
+    div > img{
+        position: relative;
+        top: 58px;
+        bottom: 500px;
+        height: 36vh;
+        width: 100%;
+        margin-bottom: 8vh;
+        opacity: 0.3;
+        object-fit: cover;
+    }
+
+    .text_container{
+        position: absolute;
+        margin: -10% 10px 10px 10px  ;
+        word-wrap: break-word;
+        text-transform: capitalize;
+        color: white;
+  }
+   div.circle_container{
+     position: relative;
+     margin-top: -210px;
+     margin-bottom: 0px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+     .circle{
+       position: relative;
+       border: 7px solid #f00;
+       width: 30%;
+       border-radius: 50%;
+    }
+    .circle::after{
+      content: "";
+      padding-bottom: 100%;
+      display: block;
+    }
+    .arrow-down {
+      position: absolute;
+      top:-11px ;
+      left: -7px;
+      width: 0; 
+      height: 0; 
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      /* border-top: 20px solid #f00; */
+      border-bottom: 7px solid #f00;
+    }
+
+    .line{
+       position: absolute;
+       left:50%;
+       top: 60%;
+       border: 4.5px solid #f00;
+       width: 1vw;
+       height: 6vh;
+       background-color: #f00;
+       border-bottom-right-radius: 50%;
+       border-bottom-left-radius:50% ;
+       transform: translate(-50%, -50%);
+     
+    }
+
+    .small_circle{
+      position: absolute;
+      left: -6px;
+      top:-25px ;
+      height: 12px;
+      width: 0;
+      border: 6px solid ;
+      border-radius: 50%;
+      color:#f00 ;
+      background: #f00;
+    }
+
+   div.text_container span{
+        padding: 10px;
+  }
+
+  .Error_message{
+  text-align: center; font-size: 24px; margin: 15px 20px 8px;
+  
+  }
+}
+
+
+/* this is Also Mobile Screen but bigger than Above screen */
+@media only screen and (min-width:900px){
+  
+    div.header-section{
+      height: 90%;
+      width: 100%;
+      background: black;
+      overflow: hidden;
+    }
+    div.header-section > img{
+        position: relative;
+        top: 58px;
+        bottom: 500px;
+        height: 36vh;
+        width: 100%;
+        margin-bottom: 8vh;
+        opacity: 0.3;
+        object-fit: cover;
+    }
+
+    .text_container{
+        position: absolute;
+        margin: -10% 10px 10px 10px  ;
+        word-wrap: break-word;
+        text-transform: capitalize;
+        color: white;
+  }
+   div.circle_container{
+     position: relative;
+     margin-top: -210px;
+     margin-bottom: 0px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+     .circle{
+       position: relative;
+       border: 7px solid #f00;
+       width: 15%;
+       border-radius: 50%;
+    }
+    .circle::after{
+      content: "";
+      padding-bottom: 100%;
+      display: block;
+    }
+    .arrow-down {
+      position: absolute;
+      top:-11px ;
+      left: -7px;
+      width: 0; 
+      height: 0; 
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      /* border-top: 20px solid #f00; */
+      border-bottom: 7px solid #f00;
+    }
+
+    .line{
+       position: absolute;
+       left:50%;
+       top: 60%;
+       border: 4.5px solid #f00;
+       width: 1vw;
+       height: 6vh;
+       background-color: #f00;
+       border-bottom-right-radius: 50%;
+       border-bottom-left-radius:50% ;
+       transform: translate(-50%, -50%);
+     
+    }
+
+    .small_circle{
+      position: absolute;
+      left: -6px;
+      top:-25px ;
+      height: 12px;
+      width: 0;
+      border: 6px solid ;
+      border-radius: 50%;
+      color:#f00 ;
+      background: #f00;
+    }
+
+   div.text_container span{
+        padding: 10px;
+  }
+
+  .Error_message{
+  text-align: center; font-size: 24px; margin: 15px 20px 8px;
+  
+  }
+}
+
+
+
+/* this is the laptop view */
+@media only screen and (min-width:800px){
+  
+    div.header-section{
+      height: 90%;
+      width: 100%;
+      background: black;
+      overflow: hidden;
+    }
+   
+    div.header-section > img{
+        position: relative;
+        top: 58px;
+        bottom: 500px;
+        height: 36vh;
+        width: 100%;
+        margin-bottom: 8vh;
+        opacity: 0.3;
+        object-fit: cover;
+    }
+
+    .text_container{
+        position: absolute;
+        margin: -10% 10px 10px 10px  ;
+        word-wrap: break-word;
+        text-transform: capitalize;
+        color: white;
+  }
+   div.circle_container{
+     position: relative;
+     margin-top: -210px;
+     margin-bottom: 0px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+     .circle{
+       position: relative;
+       border: 7px solid #f00;
+       width: 15%;
+       border-radius: 50%;
+    }
+    .circle::after{
+      content: "";
+      padding-bottom: 100%;
+      display: block;
+    }
+    .arrow-down {
+      position: absolute;
+      top:-11px ;
+      left: -7px;
+      width: 0; 
+      height: 0; 
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      /* border-top: 20px solid #f00; */
+      border-bottom: 7px solid #f00;
+    }
+
+    .line{
+       position: absolute;
+       left:50%;
+       top: 60%;
+       border: 4.5px solid #f00;
+       width: 1vw;
+       height: 6vh;
+       background-color: #f00;
+       border-bottom-right-radius: 50%;
+       border-bottom-left-radius:50% ;
+       transform: translate(-50%, -50%);
+     
+    }
+
+    .small_circle{
+      position: absolute;
+      left: -6px;
+      top:-25px ;
+      height: 12px;
+      width: 0;
+      border: 6px solid ;
+      border-radius: 50%;
+      color:#f00 ;
+      background: #f00;
+    }
+
+   div.text_container span{
+        padding: 10px;
+  }
+
+  .Error_message{
+  text-align: center; font-size: 24px; margin: 15px 20px 8px;
+  
+  }
+
+}

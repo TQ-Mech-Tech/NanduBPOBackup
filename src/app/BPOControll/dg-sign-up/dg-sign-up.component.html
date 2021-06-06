@@ -1,0 +1,53 @@
+<!-- <div fxHide.xs fxHide.lt-md  class="parent_div"> -->
+  <div  class="parent_div">
+      <div class="child_div">
+        <div style="display: flex; justify-content: center;align-items: center;">
+          <h3 class="Refund_style">Sign Up - Delivery man</h3>
+          </div>
+        <div class="main-div">
+
+              <mat-card>
+                        <div style="text-align: center;">
+                              <mat-card-title>Sign Up</mat-card-title>
+                              <mat-card-subtitle>Delivery Guys</mat-card-subtitle>
+                        </div>
+                        <form [formGroup]="deliveryManSignUp"  #formDirective="ngForm" 
+                        (ngSubmit)="submitForm(deliveryManSignUp, formDirective)">
+
+                        <mat-form-field class="col-6"> 
+                          <input formControlName="username" matInput type="text" placeholder="Username">
+                          <mat-error *ngIf="">please enter your username</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="col-6">
+                          <input formControlName="email" matInput type="text" placeholder="enter your email">
+                          <mat-error *ngIf="">please enter email</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="col-6">
+                          <input formControlName="mobile" matInput type="text" placeholder="enter your mobile">
+                          <mat-error *ngIf="">please enter your mobile</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="col-6" appearance="fill">
+                          <mat-label>enter your password</mat-label>
+                          <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+                          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                          </button>
+                        </mat-form-field>
+
+                        <button fxFlexFill mat-raised-button color="primary" (click)="onSave()" type="submit" >Sign Up</button>
+
+                        </form>
+              </mat-card>
+
+            </div>
+      </div>
+      <app-view-dg-sign-up></app-view-dg-sign-up>
+</div>
+
+
+<app-small-device-not-supported>
+
+</app-small-device-not-supported>

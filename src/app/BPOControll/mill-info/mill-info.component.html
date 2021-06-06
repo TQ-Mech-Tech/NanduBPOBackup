@@ -1,0 +1,86 @@
+<br><br>
+<hr>
+<div style="display: flex; justify-content: center;align-items: center;">
+  <h2 class="Refund_style">Mill Information</h2>
+  </div>
+<div class="fx_container">
+  </div>
+
+   <!-- table 1 start form here -->
+  <div class="fx_container">
+  <mat-form-field class="search_box">
+    <mat-label>Search Mills Info</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Serach - Owner Name, City, Sector, Contact Number" #input>
+  </mat-form-field>
+  </div>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="orderId">
+      <th mat-header-cell *matHeaderCellDef>Order Id</th>
+      <td mat-cell *matCellDef="let element"> {{element.orderId}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="custID">
+      <th mat-header-cell *matHeaderCellDef>Customer Id</th>
+      <td mat-cell *matCellDef="let element"> {{element.custID}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="pickUpDate">
+      <th mat-header-cell *matHeaderCellDef>Pick Up Date</th>
+      <td mat-cell *matCellDef="let element"> {{element.pickUpDate}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="droppingDate">
+      <th mat-header-cell *matHeaderCellDef>Dropping Date</th>
+      <td mat-cell *matCellDef="let element"> {{element.droppingDate}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="customerName">
+      <th mat-header-cell *matHeaderCellDef>Customer Name</th>
+      <td mat-cell *matCellDef="let element"> {{element.customerName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="custMobile">
+      <th mat-header-cell *matHeaderCellDef>Customer Mobile</th>
+      <td mat-cell *matCellDef="let element"> {{element.custMobile}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="millName">
+      <th mat-header-cell *matHeaderCellDef>Mill Name</th>
+      <td mat-cell *matCellDef="let element"> {{element.millName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="MWName">
+      <th mat-header-cell *matHeaderCellDef> M. Worker Name</th>
+      <td mat-cell *matCellDef="let element"> {{element.MWName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="millcontact">
+      <th mat-header-cell *matHeaderCellDef> Mill Contact N. </th>
+      <td mat-cell *matCellDef="let element"> {{element.millcontact}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="sector_near_area">
+      <th mat-header-cell *matHeaderCellDef> Sector Near Area </th>
+      <td mat-cell *matCellDef="let element"> {{element.sector_near_area}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="city">
+      <th mat-header-cell *matHeaderCellDef> City </th>
+      <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+    </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="11">No data matching the filter "{{input.value}}"</td>
+        </tr>
+      </table>
+
+<app-small-device-not-supported>
+
+</app-small-device-not-supported>
+<br>

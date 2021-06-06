@@ -1,0 +1,93 @@
+<div style="display: flex; justify-content: center;align-items: center;">
+  <h2 class="Refund_style">Update and save Cart</h2>
+  </div>
+<h2 mat-dialog-title></h2>
+<mat-dialog-content class="mat-typography">
+  <mat-card>
+    <div style="display: flex; justify-content: center;align-items: center; flex-direction: column;margin-top: -20px;">
+     <div> <h3>Change Your Cart Item</h3></div>
+    <div><mat-card-header>
+      <mat-card-title>Your cart items id :{{id}}</mat-card-title>
+    </mat-card-header></div>
+    </div>
+    <form>
+      <mat-form-field style="width:40vw" >
+        <input matInput type="text" name="number" ngModel placeholder="Customer ID">
+        <mat-error *ngIf="">...</mat-error>
+      </mat-form-field><br>
+
+      <mat-form-field style="width:40vw" >
+        <input matInput type="text" name="number" ngModel placeholder="LoginID">
+        <mat-error *ngIf="">...</mat-error>
+      </mat-form-field><br>
+
+      <mat-form-field style="width:40vw" >
+        <input matInput type="text" name="number" ngModel placeholder="firstName">
+        <mat-error *ngIf="">...</mat-error>
+      </mat-form-field><br>
+
+      <mat-form-field style="width:40vw" >
+        <input matInput type="text" name="number" ngModel placeholder="MiddleName">
+        <mat-error *ngIf="">...</mat-error>
+      </mat-form-field><br>
+
+      <mat-form-field style="width:40vw" >
+        <input matInput type="text" name="number" ngModel placeholder="LastName">
+        <mat-error *ngIf="">...</mat-error>
+      </mat-form-field><br>
+
+      <mat-form-field style="width:40vw" >
+        <input matInput type="text" name="number" ngModel placeholder="HomeAddress">
+        <mat-error *ngIf="">...</mat-error>
+      </mat-form-field><br>
+
+      <mat-form-field style="width:40vw" >
+        <input matInput type="text" name="number" ngModel placeholder="Sector">
+        <mat-error *ngIf="">...</mat-error>
+      </mat-form-field><br>
+
+      <mat-form-field style="width:40vw" >
+        <input matInput type="text" name="number" ngModel placeholder="PlotNo">
+        <mat-error *ngIf="">...</mat-error>
+      </mat-form-field><br>
+
+      <mat-form-field style="width:40vw" >
+        <input matInput type="text" name="number" ngModel placeholder="City">
+        <mat-error *ngIf="">...</mat-error>
+      </mat-form-field><br>
+
+      <mat-form-field style="width:40vw" >
+        <input matInput type="text" name="number" ngModel placeholder="Tal">
+        <mat-error *ngIf="">...</mat-error>
+      </mat-form-field><br>
+
+      <mat-form-field style="width:40vw" >
+        <input matInput type="text" name="number" ngModel placeholder="Dist">
+        <mat-error *ngIf="">...</mat-error>
+      </mat-form-field><br>
+
+      <mat-form-field style="width:40vw" >
+        <input matInput type="text" name="number" ngModel placeholder="State">
+        <mat-error *ngIf="">...</mat-error>
+      </mat-form-field><br>
+
+      <mat-form-field style="width:40vw" >
+        <input matInput type="text" name="number" ngModel placeholder="Pincode">
+        <mat-error *ngIf="">...</mat-error>
+      </mat-form-field><br>
+
+      <mat-form-field style="width:40vw" >
+        <input matInput type="text" name="number" ngModel placeholder="Mobile">
+        <mat-error *ngIf="">...</mat-error>
+      </mat-form-field><br>
+
+     <!-- here we may be added button becoz of form -->
+
+    </form>
+  </mat-card><br>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" mat-dialog-close>Save</button>
+  <button mat-raised-button color="warn" mat-dialog-close>Delete</button>
+
+</mat-dialog-actions>

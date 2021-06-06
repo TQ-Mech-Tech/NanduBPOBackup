@@ -1,0 +1,75 @@
+.Refund_style{
+  text-transform: capitalize;letter-spacing: 3px;font-weight: 300;width: 600px;margin-top: 20px;padding: 5px; color: white;text-align: center; background: rgb(78, 78, 199) ;box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+
+.main-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card-title{
+  color:#3F51B5;
+  font: Arial,sans-serif;
+  font-size: 20px;
+
+}
+
+
+
+
+.col {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.center{
+  text-align: center;
+}
+
+/* this is the mobile  view */
+@media only screen and (max-width:600px){
+  .child_div{
+  position: relative;
+  top: 62px;
+  bottom: 0;
+  margin-bottom: 16.2%;
+  }
+  .col-6{
+    width: 89vw;
+    margin-bottom: 10px;
+  }
+
+}
+
+/* this is the tablete view */
+@media only screen and (min-width:720px){
+.child_div{
+  position: relative;
+  top: 150px;
+  bottom: 0;
+  margin-bottom: 21.5%;
+  }
+  .col-6{
+    width: 90vw;
+    margin-bottom: 10px;
+  }
+
+}
+
+
+/* this is the laptop view */
+@media only screen and (min-width:992px){
+.child_div{
+  position: relative;
+  top: 100px;
+  bottom: 0;
+  margin-bottom: 10%;
+  }
+  .col-6{
+    width: 40vw;
+    margin-bottom: 10px;
+  }
+}

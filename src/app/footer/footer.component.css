@@ -1,0 +1,97 @@
+
+.section-main{
+display: grid;
+grid-template-rows: 130px 130px 130px;
+justify-content: center;
+align-items: center;
+row-gap: 1px;
+ background:#3f51b5 ;  
+/* color: white; background-color: #0d2187; #242734 */
+
+}
+.link_styles{
+    display: flex; 
+    flex-direction:row; 
+   }
+
+   .first_row{
+    text-align: center;
+   }
+.atteywalebaba_Name{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.all-right-reserve{
+    font-size: 10px;
+    margin-top: -11px;
+   text-transform:uppercase;
+   letter-spacing: 6px;
+}
+div.item a{
+    color:white
+}
+div.item a:hover{
+    color:white
+}
+
+@media only screen and (max-width:600px){ 
+    .section-main{
+      grid-template-rows: 178px 170px 180px ;
+    }
+    .link_styles{
+        display: flex; 
+        flex-direction:column; 
+        text-align: center;
+       margin: 2px;
+       }
+  
+}
+.first_row{ color: white;}
+
+
+
+/* this is the laptop view */
+@media only screen and (min-width:992px){
+    .section-main{
+      margin-top: 20px;
+    }
+  }
+
+/* grid area properties */
+/* 
+
+.second_row{ grid-area: second_link;}
+.third_row{ grid-area: third_icon;} */
+
+
+.companyname{
+   padding: 1rem;
+}
+
+
+.item{
+    margin: 20px;
+    color: white;
+}
+.icon_style{
+    margin: 10px;
+}
+
+
+
+.icon{
+    padding: 9px 10px 9px 10px ;
+    background-color: white;
+    text-align:center;
+    color: #242734;
+    border-radius: 50%;
+}
+
+.facebook{
+    padding: 9px 12.5px 9px 12.5px ;
+    background-color: white;
+    text-align:center;
+    color: #242734;
+    border-radius: 50%;
+}
+

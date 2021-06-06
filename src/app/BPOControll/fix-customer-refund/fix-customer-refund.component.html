@@ -1,0 +1,153 @@
+<!-- <div fxHide.xs fxHide.lt-md  class="parent_div">    -->
+  <div  *ngIf="!tableisEmpty" class="cartisempty" >
+    <div     class="content-container">
+      <div class="sub-container" >
+       <!-- <div style="position: absolute; top: 120px;">
+        <a  routerLink="/app-customer-cart" > <mat-icon  style="font-size: 40px;margin-right: 15px; margin-top: 15px;cursor: pointer;"> refresh</mat-icon></a>
+       </div> -->
+        <div class="icon" >
+          <mat-icon class="setting-of-icon">error_outline</mat-icon>
+        </div>
+      </div>
+    <div >
+     
+    <h1 class="yourCartIsEmpty">There is no content available !</h1>
+    </div>
+     <div  class="paragraph-div">
+      <p class="para-of-contianer">
+        There is no content available to show at the movement please wait for further request
+      </p>
+        
+     </div>
+     <div class="container-of-button">
+  
+     </div>
+    </div>
+  </div>
+  <!-- *ngIf="!tableisEmpty" -->
+  
+  <div  class="parent_div" *ngIf="tableisEmpty" >
+  <div class="child_div">
+    <div style="display: flex; justify-content: center;align-items: center;">
+      <h3 class="Refund_style">Recieved - customer's Refund Request</h3>
+      </div>
+<div>
+  <div class="fx_container">
+  
+  </div>
+
+  <!-- table 1 start form here -->
+  <div class="fx_container">
+   <mat-form-field  class="search_box">
+    <mat-label>Search Customer Info</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+   </mat-form-field>
+</div>
+ 
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="orderId">
+    <th mat-header-cell *matHeaderCellDef>Order Id</th>
+    <td mat-cell *matCellDef="let element"> {{element.orderId}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="custID">
+    <th mat-header-cell *matHeaderCellDef> Customer Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.custID}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="orderPlaceDate">
+    <th mat-header-cell *matHeaderCellDef> Order Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.orderPlaceDate}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="razorPayID">
+    <th mat-header-cell *matHeaderCellDef> RazorPay Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.razorPayID}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="approveBtn">
+    <th mat-header-cell *matHeaderCellDef> Approved </th>
+    <td *matCellDef="let row" >
+      <input  type="hidden" name="number" [value]="row._id"  #inputvalue>
+      <button style="width:120px;background: rgb(92, 92, 255); color: white; text-transform: capitalize; " mat-raised-button (click)="approvedReq(inputvalue)">approved</button>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="cancelBtn">
+    <th mat-header-cell *matHeaderCellDef> Cancel</th>
+    <td *matCellDef="let row" >
+      <input  type="hidden" name="number" [value]="row._id" #inputvalue2>
+      <button style="width:120px;background: rgb(92, 92, 255); color: white; text-transform: capitalize;" mat-raised-button (click)="cancleReq(inputvalue2)">cancle</button>
+    </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  <!-- Row shown when there is no matching data. -->
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="6">No data matching the filter "{{input.value}}"</td>
+  </tr>
+</table>
+
+<div>
+</div>
+</div>
+
+<br>
+
+
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="orderId">
+        <th mat-header-cell *matHeaderCellDef>Order ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.orderId}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="custID">
+        <th mat-header-cell *matHeaderCellDef> Customer Profile ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.custID}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="orderPlaceDate">
+        <th mat-header-cell *matHeaderCellDef> Order Place Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.orderPlaceDate}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <!-- <ng-container matColumnDef="razorPayID">
+        <th mat-header-cell *matHeaderCellDef> RazorPay ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.razorPayID}} </td>
+      </ng-container>
+        
+      <ng-container matColumnDef="approved-btn">
+        <th mat-header-cell *matHeaderCellDef> Approved </th>
+        <td *matCellDef="let row" >
+          <input  type="hidden" name="number" [value]="row._id"  #inputvalue>
+          <button style="width:120px;background: rgb(92, 92, 255); color: white; text-transform: capitalize; " mat-raised-button (click)="approvedReq(inputvalue)">approved</button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cancel-btn">
+        <th mat-header-cell *matHeaderCellDef> Cancel</th>
+        <td *matCellDef="let row" >
+          <input  type="hidden" name="number" [value]="row._id" #inputvalue2>
+          <button style="width:120px;background: rgb(92, 92, 255); color: white; text-transform: capitalize;" mat-raised-button (click)="cancleReq(inputvalue2)">cancle</button>
+        </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
+
+      <!-- Row shown when there is no matching data. -->
+      <!-- <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="6">No data matching the filter "{{input.value}}"</td>
+      </tr>
+    </table> --> 

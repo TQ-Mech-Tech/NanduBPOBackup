@@ -1,0 +1,30 @@
+.container{position: relative;height: 60vh; margin-top: 80px;}
+.main{ display: flex; justify-content: center; align-items: center;  flex-direction: column;position: absolute; margin-bottom: 50%;top: 30%;width: 90vw;}
+.numberfourOfour{font-size: 17vh; font-weight: 500;}
+.not_found{font-size: 9vh;line-height: 100px; margin-top: 10px;}
+.go_back_button{background:tomato; border: 2px solid white; border-radius: 10px;width: 200px; height: 40px;}
+
+
+@media only screen and (max-width:200px){
+    .numberfourOfour{font-size: 4vh; font-weight: 500;}
+.not_found{font-size: 2vh;line-height: 100px; margin-top: 10px;}
+.go_back_button{background:tomato; border: 2px solid white; border-radius: 10px;width: 200px; height: 40px;}
+}
+
+@media only screen and (max-width:600px){
+    .numberfourOfour{font-size: 16vh; font-weight: 500;}
+.not_found{font-size: 8vh;line-height: 100px; margin-top: 10px;}
+.go_back_button{background:tomato; border: 2px solid white; border-radius: 10px;width: 200px; height: 40px;}
+}
+
+@media only screen and (max-width:720px){
+    .numberfourOfour{font-size: 16vh; font-weight: 500;}
+.not_found{font-size: 8vh;line-height: 100px; margin-top: 10px;}
+.go_back_button{background:tomato; border: 2px solid white; border-radius: 10px;width: 200px; height: 40px;}
+}
+
+@media only screen and (min-width:900px){
+    .numberfourOfour{font-size: 16vh; font-weight: 500;}
+.not_found{font-size: 8vh;line-height: 100px; margin-top: 10px;}
+.go_back_button{background:tomato; border: 2px solid white; border-radius: 10px;width: 200px; height: 40px;}
+}
